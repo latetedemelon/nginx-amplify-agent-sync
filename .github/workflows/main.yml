@@ -23,6 +23,6 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
         with:
-          repository: nginx-amplify-agent
+          repository: latetedemelon/nginx-amplify-agent
           path: ''
           ref: 'nginxinc/nginx-amplify-agent'
