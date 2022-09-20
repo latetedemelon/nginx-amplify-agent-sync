@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Clone from F5
 
 # Controls when the workflow will run
 on:
@@ -22,18 +22,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        uses: dmnemec/copy_file_to_another_repo_action@main
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          source_file: '' # Folder to copy
-          destination_repo: 'latetedemelon/nginx-amplify-agent' # Target repo
-          #destination_folder: '' # Folder where to copy it
-          destination_branch: 'nginxinc/nginx-amplify-agent'
-          user_email: 'robert.mclellan+github@gmail.com'
-          user_name: 'latetedemelon'
-          commit_message: "AUTO: Sync from NGINX Branch"
-          git_server: 'github.com'
+          repository: nginx-amplify-agent
+          path: ''
+          ref: 'nginxinc/nginx-amplify-agent'
