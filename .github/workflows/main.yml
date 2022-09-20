@@ -29,9 +29,9 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          source_file: '/' # Folder to copy
+          source_file: '' # Folder to copy
           destination_repo: 'latetedemelon/nginx-amplify-agent' # Target repo
-          destination_folder: '/' # Folder where to copy it
+          #destination_folder: '' # Folder where to copy it
           destination_branch: 'nginxinc/nginx-amplify-agent'
           user_email: 'robert.mclellan+github@gmail.com'
           user_name: 'latetedemelon'
